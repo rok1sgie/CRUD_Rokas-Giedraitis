@@ -1,7 +1,7 @@
 <h1>CRUD užduotis 2026-04-12</h1>
 <b>Aprašymas: </b>
 Šis projektas yra Laravel  pagrindu sukurtas CRUD (Create, Read, Update, Delete) pavyzdys su studentų ir miestų duomenų valdymu.
-<br>2026-04-12 Papildomai aktyvuotas Soft delete trynimas.
+<br>2026-04-12 Sukurtas projektas su CRUD
 
 
 
