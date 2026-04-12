@@ -46,6 +46,17 @@
         </select>
     </div>
 
+    <div class="mb-3">
+    <label class="form-label">Grupė</label>
+    <select name="grupe_id" class="form-control" required>
+        @foreach($grupes as $grupe)
+            <option value="{{ $grupe->id }}" {{ old('grupe_id', $student->grupe_id) == $grupe->id ? 'selected' : '' }}>
+                {{ $grupe->kodas }} - {{ $grupe->pavadinimas }}
+            </option>
+        @endforeach
+    </select>
+</div>
+
     <button type="submit" class="btn btn-primary">Išsaugoti</button>
 </form>
 

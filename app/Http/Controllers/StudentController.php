@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\City;
+use App\Models\Grupe;
 
 class StudentController extends Controller
 {
     // Rodyti visus studentus su miestais (index)
     public function index()
     {
-        $students = Student::with('city')->paginate(20);
+        $students = Student::with('city', 'grupe')->paginate(20);
         return view('students.index', compact('students'));
     }
 
@@ -18,7 +19,8 @@ class StudentController extends Controller
     public function create()
     {
         $cities = City::all();
-        return view('students.create', compact('cities'));
+        $grupes = Grupe::all();
+        return view('students.create', compact('cities', 'grupes'));
     }
 
     // Naujo studento įrašymas
@@ -31,6 +33,7 @@ class StudentController extends Controller
     'address' => 'required|string',
     'phone' => 'required|string|max:20',
     'city_id' => 'required|exists:cities,id',
+    'grupe_id' => 'required|exists:grupes,id',
 ]);
 
         Student::create($request->all());
@@ -41,7 +44,8 @@ class StudentController extends Controller
     public function edit(Student $student)
     {
         $cities = City::all();
-        return view('students.edit', compact('student', 'cities'));
+        $grupes = Grupe::all();
+        return view('students.edit', compact('student', 'cities', 'grupes'));
     }
 
    // Atnaujinti studento duomenis
@@ -54,6 +58,7 @@ class StudentController extends Controller
     'address' => 'required|string',
     'phone' => 'required|string|max:20',
     'city_id' => 'required|exists:cities,id',
+    'grupe_id' => 'required|exists:grupes,id',
 ]);
 
     // Atnaujiname studento duomenis

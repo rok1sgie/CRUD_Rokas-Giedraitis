@@ -17,6 +17,7 @@
                 <th>Gimimo data</th>
                 <th>Adresas</th>
                 <th>Miestas</th>
+                <th>Grupė</th>
                 <th>Veiksmai</th>
             </tr>
         </thead>
@@ -29,6 +30,7 @@
                     <td>{{ $student->birthday }}</td>
                     <td>{{ $student->address }}</td>
                     <td>{{ $student->city->name }}</td>
+                    <td>{{ $student->grupe?->kodas }}</td>
                     <td>
                         <a href="{{ route('students.edit', $student->id) }}" class="btn btn-primary btn-sm">Redaguoti</a>
                         <form action="{{ route('students.destroy', $student->id) }}" method="POST" class="d-inline">

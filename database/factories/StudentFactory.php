@@ -13,6 +13,7 @@ class StudentFactory extends Factory
             'address' => $this->faker->address,
             'phone' => $this->faker->phoneNumber,
             'city_id' => City::inRandomOrder()->first()->id ?? 1,
+            'grupe_id' => Grupe::inRandomOrder()->value('id') ?? 1,
         ];
     }
 }
