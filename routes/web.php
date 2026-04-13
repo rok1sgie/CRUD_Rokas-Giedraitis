@@ -32,4 +32,13 @@ Route::middleware('auth')->group(function () {
 });
 
 
+Route::get('students/trashed', [StudentController::class, 'trashed'])->name('students.trashed');
+
+
+Route::post('students/{id}/restore', [StudentController::class, 'restore'])->name('students.restore');
+Route::delete('students/{id}/forceDelete', [StudentController::class, 'forceDelete'])->name('students.forceDelete');
+//Route::get('/students', [StudentController::class, 'index']);
+//Route::resource('students', StudentController::class);
+
+
 require __DIR__.'/auth.php';
