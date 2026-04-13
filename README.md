@@ -3,9 +3,8 @@
 Šis projektas yra Laravel  pagrindu sukurtas CRUD (Create, Read, Update, Delete) pavyzdys su studentų ir miestų duomenų valdymu.
 <br>2026-04-12 20:01 Sukurtas projektas su CRUD ir įkeltas į Github
 <br>2026-04-12 21:24 Projekto patobulinimai (įtrauktos grupės)
-<br>2026-04-13 15:13 Projekto patobulinimai (Laravel Breeze įdiegimas į Student CRUD ) <br>
-
-
+<br>2026-04-13 15:13 Projekto patobulinimai (Laravel Breeze įdiegimas į Student CRUD )
+<br>2026-04-13 16:00 Projekto patobulinimai (Soft Delete įtraukimas į sistemą) 
 
 
 <b>Diegimas: </b>
